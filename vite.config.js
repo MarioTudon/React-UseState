@@ -5,7 +5,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
-    base: '',
+    base: '/',
     plugins: [
         react,
         createHtmlPlugin({
@@ -13,7 +13,7 @@ export default defineConfig({
         })
     ],
     build: {
-        outDir: resolve(__dirname, '../dist'),
+        outDir: resolve(__dirname, 'dist'),
         assetsDir: 'assets',
         minify: true,
         rollupOptions: {
