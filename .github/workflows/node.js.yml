@@ -34,8 +34,8 @@ jobs:
     - name: Build with Vite
       run: npm run build --if-present
 
-    # Optional: Run tests if you have a test script
-    - name: Run tests
-      run: npm test
-      # Uncomment the following line if you do not have a test script
-      # if: false  # Remove or set to true if you have tests to run
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist  # Asegúrate de que `vite build` coloque los archivos en `dist`
