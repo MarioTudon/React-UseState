@@ -5,7 +5,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
-    base: '',
+    base: '/React-UseState/',
     plugins: [
         react,
         createHtmlPlugin({
